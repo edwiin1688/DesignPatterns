@@ -1,7 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-// 遊戲主迴圈
+/// <summary>
+/// 遊戲主迴圈
+/// </summary>
 public class GameLoop : MonoBehaviour
 {
 	// 場景狀態
@@ -17,14 +19,18 @@ public class GameLoop : MonoBehaviour
 		UnityEngine.Random.seed = (int)DateTime.Now.Ticks;
 	}
 
-	// Use this for initialization
+	/// <summary>
+	/// Use this for initialization
+	/// </summary>
 	void Start()
 	{
 		// 設定起始的場景
 		m_SceneStateController.SetState(new StartState(m_SceneStateController), "");
 	}
 
-	// Update is called once per frame
+	/// <summary>
+	/// Update is called once per frame
+	/// </summary>
 	void Update()
 	{
 		m_SceneStateController.StateUpdate();

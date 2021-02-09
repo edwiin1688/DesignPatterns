@@ -2,7 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
-// 戰鬥狀態
+/// <summary>
+/// 戰鬥狀態
+/// </summary>
 public class BattleState : ISceneState
 {
 	public BattleState(SceneStateController Controller) : base(Controller)
@@ -10,19 +12,25 @@ public class BattleState : ISceneState
 		this.StateName = "BattleState";
 	}
 
-	// 開始
+	/// <summary>
+	/// 開始
+	/// </summary>
 	public override void StateBegin()
 	{
 		PBaseDefenseGame.Instance.Initinal();
 	}
 
-	// 結束
+	/// <summary>
+	/// 結束
+	/// </summary>
 	public override void StateEnd()
 	{
 		PBaseDefenseGame.Instance.Release();
 	}
 
-	// 更新
+	/// <summary>
+	/// 更新
+	/// </summary>
 	public override void StateUpdate()
 	{
 		// 遊戲邏輯
