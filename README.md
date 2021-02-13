@@ -18,3 +18,8 @@ StartState(開始場景)、MainMenuState(主畫面)、BattleState(戰鬥場景) 
 5. 建立 MainMenuScene 的 Unity3D - Scene(包含開始按鈕)
 6. 建立 BattleScene 的 Unity3D - Scene(包含戰鬥物件，如:BackGroundImage等等)
 7. MainMenuState 定義一個進入 BattleState 的開始 UI 按鈕，點擊後進入 BattleState 。
+
+### 使用狀態模式(State)的優點:
+1. 減少錯誤的發生並降低維護成本(不再使用 switch 判斷目前狀態)
+2. 狀態執行環境單純化(實作在一個狀態類別下)
+3. 專案間可共用場景(配合模板模式與策略模式定義各需求的實作)
