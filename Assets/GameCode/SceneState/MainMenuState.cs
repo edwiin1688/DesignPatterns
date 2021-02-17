@@ -18,9 +18,11 @@ public class MainMenuState : ISceneState
 	public override void StateBegin()
 	{
 		// 取得開始按鈕
-		Button tmpBtn = UITool.GetUIComponent<Button>("StartGameBtn");
-		if (tmpBtn != null)
-			tmpBtn.onClick.AddListener(() => OnStartGameBtnClick(tmpBtn));
+		Button tmpBtn_ = UITool.GetUIComponent<Button>("StartGameBtn");
+		if (tmpBtn_ != null)
+		{
+			tmpBtn_.onClick.AddListener(() => OnStartGameBtnClick(tmpBtn_));
+		}
 	}
 
 	/// <summary>
@@ -29,7 +31,7 @@ public class MainMenuState : ISceneState
 	/// <param name="theButton"></param>
 	private void OnStartGameBtnClick(Button theButton)
 	{
-		//Debug.Log ("OnStartBtnClick:"+theButton.gameObject.name);
+		Debug.Log ("OnStartBtnClick:"+theButton.gameObject.name);
 		m_Controller.SetState(new BattleState(m_Controller), "BattleScene");
 	}
 

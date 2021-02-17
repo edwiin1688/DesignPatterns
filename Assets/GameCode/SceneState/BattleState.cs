@@ -17,7 +17,7 @@ public class BattleState : ISceneState
 	/// </summary>
 	public override void StateBegin()
 	{
-		PBaseDefenseGame.Instance.Initinal();
+		BaseGame.Instance.Initinal();
 	}
 
 	/// <summary>
@@ -25,7 +25,7 @@ public class BattleState : ISceneState
 	/// </summary>
 	public override void StateEnd()
 	{
-		PBaseDefenseGame.Instance.Release();
+		BaseGame.Instance.Release();
 	}
 
 	/// <summary>
@@ -34,11 +34,13 @@ public class BattleState : ISceneState
 	public override void StateUpdate()
 	{
 		// 遊戲邏輯
-		PBaseDefenseGame.Instance.Update();
+		BaseGame.Instance.Update();
 		// Render由Unity負責
 
 		// 遊戲是否結束
-		if (PBaseDefenseGame.Instance.ThisGameIsOver())
+		if (BaseGame.Instance.ThisGameIsOver())
+		{
 			m_Controller.SetState(new MainMenuState(m_Controller), "MainMenuScene");
+		}
 	}
 }

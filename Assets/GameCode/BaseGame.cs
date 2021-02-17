@@ -3,7 +3,7 @@
 /// <summary>
 /// 遊戲系統
 /// </summary>
-public class PBaseDefenseGame : Singleton<PBaseDefenseGame>
+public class BaseGame : Singleton<BaseGame>
 {
 	/// <summary>
 	/// 場景狀態控制
